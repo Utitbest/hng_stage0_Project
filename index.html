@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile Card — HNG Task</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <article class="card" aria-label="Profile card" data-testid="test-profile-card">
+
+    <figure class="avatar" aria-hidden="false">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop&s=example" alt="User avatar" data-testid="test-user-avatar">
+
+      <div class="upload" style="flex-direction:column; align-items:center;">
+        <label for="avatarInput" style="border-radius: 8px; padding: .4em; font-size:.8rem; font-weight: 600; background-color: var(--accent); color: white; font-size:.82rem; cursor:pointer">Change avatar</label>
+        <input id="avatarInput" type="file" accept="image/*" aria-label="Upload avatar" hidden/>
+      </div>
+    </figure>
+
+    <div class="meta">
+      <header>
+        <h2 aria-label="User full name" data-testid="test-user-name">Utitofon Edem Akpan</h2>
+        <div class="role">Frontend Developer</div>
+      </header>
+
+      <p class="bio" data-testid="test-user-bio">I create fast, responsive web apps that look great on any device, clean UI, smooth performance, and thoughtful design.</p>
+
+      <div style="margin-top:10px; font-size:.9rem; color:var(--muted)">
+        Current time (ms): <span id="timeMs" data-testid="test-user-time">0</span>
+      </div>
+
+      <nav class="social" aria-label="Social links" data-testid="test-user-social-links">
+        <ul>
+          <li><a href="https://x.com/utitbest" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+          <li><a href="https://github.com/Utitbest" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/utitbest/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <div class="stats" aria-hidden="true">
+        <div class="stat" title="projects">12 Projects</div>
+        <div class="stat" title="followers">1.1k Followers</div>
+      </div>
+
+      <div class="lists">
+        <section aria-labelledby="hobbiesLabel">
+          <h3 id="hobbiesLabel" style="margin-top:3px; font-size:.95rem">Hobbies</h3>
+          <ul class="li" data-testid="test-user-hobbies">
+            <li>Codding</li>
+            <li>Football</li>
+            <li>Research</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="dislikesLabel">
+          <h3 id="dislikesLabel" style="margin-top:3px; font-size:.95rem">Dislikes</h3>
+          <ul class="li" data-testid="test-user-dislikes">
+            <li>Unreadable code</li>
+            <li>Poor accessibility</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" data-testid="test-message-btn">Message</button>
+        <a class="btn btn-ghost" href="#" role="button" data-testid="test-connect-btn">Connect</a>
+      </div>
+
+    </div>
+  </article>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
